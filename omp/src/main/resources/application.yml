@@ -58,7 +58,7 @@ spring:
     #合并多个DruidDataSource的监控数据
     #spring.datasource.useGlobalDataSourceStat=true
 mybatis:
-  type-aliases-package: com.dzx.omp.mapper
+  type-aliases-package: com.zx.omp.mapper
 logging:
   level: info,error
   file: ./netweb.log

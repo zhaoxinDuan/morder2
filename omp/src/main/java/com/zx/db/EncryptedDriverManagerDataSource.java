@@ -1,6 +1,6 @@
-package com.dzx.db;
+package com.zx.db;
 
-import com.dzx.common.EncryptionUtil;
+import com.zx.common.EncryptionUtil;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import java.io.UnsupportedEncodingException;

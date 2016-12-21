@@ -1,4 +1,4 @@
-package com.dzx.common;
+package com.zx.common;
 
 import org.apache.commons.codec.binary.Base32;
 import org.apache.commons.codec.binary.Base64;

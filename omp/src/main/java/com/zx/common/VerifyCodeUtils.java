@@ -2,7 +2,7 @@
  * Copyright (c) 2016. ttp kevin.
  */
 
-package com.dzx.common;
+package com.zx.common;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

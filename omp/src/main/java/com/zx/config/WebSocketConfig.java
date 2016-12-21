@@ -1,4 +1,4 @@
-package com.dzx.config;
+package com.zx.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

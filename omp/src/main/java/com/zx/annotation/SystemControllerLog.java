@@ -2,7 +2,7 @@
  * Copyright (c) 2016. ttp kevin.
  */
 
-package com.dzx.annotation;
+package com.zx.annotation;
 
 /**
  * Created by Administrator on 2016/8/4 0004.

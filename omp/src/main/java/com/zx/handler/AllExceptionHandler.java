@@ -1,4 +1,4 @@
-package com.dzx.handler;
+package com.zx.handler;
 
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.springframework.web.bind.annotation.ControllerAdvice;

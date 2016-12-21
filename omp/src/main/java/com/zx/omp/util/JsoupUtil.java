@@ -1,4 +1,4 @@
-package com.dzx.omp.util;
+package com.zx.omp.util;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;

@@ -1,4 +1,4 @@
-package com.dzx.filter;
+package com.zx.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

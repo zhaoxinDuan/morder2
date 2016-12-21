@@ -2,13 +2,13 @@
  * Copyright (c) 2016. ttp kevin.
  */
 
-package com.dzx.annotation;
+package com.zx.annotation;
 
 /**
  * Created by Administrator on 2016/8/4 0004.
  */
 
-import com.dzx.common.HttpConnectionUtil;
+import com.zx.common.HttpConnectionUtil;
 import net.sf.json.JSONObject;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -35,12 +35,12 @@ public  class SystemLogAspect {
     //本地异常日志记录对象
     private  static  final Logger logger = LoggerFactory.getLogger(SystemLogAspect. class);
     //Service层切点
-    @Pointcut("@annotation(com.dzx.annotation.SystemServiceLog)")
+    @Pointcut("@annotation(com.zx.annotation.SystemServiceLog)")
     public  void serviceAspect() {
     }
 
     //Controller层切点
-    @Pointcut("@annotation(com.dzx.annotation.SystemControllerLog)")
+    @Pointcut("@annotation(com.zx.annotation.SystemControllerLog)")
     public  void controllerAspect() {
     }
 

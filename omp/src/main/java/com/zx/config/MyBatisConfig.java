@@ -1,4 +1,4 @@
-package com.dzx.config;
+package com.zx.config;
 
 import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.plugin.Interceptor;

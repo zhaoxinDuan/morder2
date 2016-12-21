@@ -21,7 +21,7 @@
         </javaTypeResolver>
 
         <!-- !!!! Model Configurations !!!! -->
-        <javaModelGenerator targetPackage="com.dzx.dice.domain" targetProject="D:\workproject\dice_doc_java\diceplatform\diceweb\src\main\java" >
+        <javaModelGenerator targetPackage="com.zx.dice.domain" targetProject="D:\workproject\dice_doc_java\diceplatform\diceweb\src\main\java" >
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -29,7 +29,7 @@
 
         <!-- !!!! Mapper Interface Configurations !!!! -->
         <!-- type="ANNOTATEDMAPPER" 是生成不需要映射xml文件的mapper -->
-        <javaClientGenerator targetPackage="com.dzx.dice.mapper" targetProject="D:\workproject\dice_doc_java\diceplatform\diceweb\src\main\java" type="ANNOTATEDMAPPER">
+        <javaClientGenerator targetPackage="com.zx.dice.mapper" targetProject="D:\workproject\dice_doc_java\diceplatform\diceweb\src\main\java" type="ANNOTATEDMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
