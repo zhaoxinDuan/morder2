@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 9090
   tomcat:
     max-threads: 1000
     min-spare-threads: 20
@@ -8,7 +8,7 @@ server:
       http-only: true
 spring:
   application:
-    name: netweb
+    name: ompweb
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #true则url、username、password必须进行加密，设置为false则不使用加密
@@ -61,7 +61,7 @@ mybatis:
   type-aliases-package: com.zx.omp.mapper
 logging:
   level: info,error
-  file: ./netweb.log
+  file: ./ompweb.log
 #    org.springframework.web: debug
 #    com.mb.dtp.mapper.crowd: debug
 #kafka:
@@ -75,4 +75,4 @@ my:
 #      google网站验证名称
   google:
     auth:
-      webname: DICE
+      webname: OMP
