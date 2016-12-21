@@ -1,0 +1,53 @@
+package com.dzx.config;
+
+import com.github.pagehelper.PageHelper;
+import org.apache.ibatis.plugin.Interceptor;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.TransactionManagementConfigurer;
+
+import javax.annotation.Resource;
+import javax.sql.DataSource;
+import java.util.Properties;
+
+/**
+ * Created by simba on 2016/12/13 0013.
+ */
+@Configuration
+@EnableTransactionManagement
+public class MyBatisConfig implements TransactionManagementConfigurer {
+
+    @Resource
+    private DataSource dataSource;
+
+    @Bean
+    public SqlSessionFactory sqlSessionFactoryBean() {
+        SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        bean.setDataSource(dataSource);
+        //分页插件
+        PageHelper pageHelper = new PageHelper();
+        Properties props = new Properties();
+        props.setProperty("reasonable", "true");
+        props.setProperty("supportMethodsArguments", "true");
+        props.setProperty("returnPageInfo", "check");
+        props.setProperty("params", "count=countSql");
+        pageHelper.setProperties(props);
+        //添加插件
+        bean.setPlugins(new Interceptor[]{pageHelper});
+        try {
+            return bean.getObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    @Override
+    public PlatformTransactionManager annotationDrivenTransactionManager() {
+        return new DataSourceTransactionManager(dataSource);
+    }
+}
