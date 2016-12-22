@@ -138,7 +138,12 @@
             <version>1.10.1</version>
         </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.nekohtml/nekohtml -->
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.22</version>
+        </dependency>
         <!--js-->
 
         <dependency>
@@ -160,6 +165,13 @@
             <artifactId>bootstrap</artifactId>
             <version>3.3.7</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars/bootstrapvalidator -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrapvalidator</artifactId>
+            <version>0.5.3</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.webjars/metisMenu -->
         <dependency>
             <groupId>org.webjars</groupId>
