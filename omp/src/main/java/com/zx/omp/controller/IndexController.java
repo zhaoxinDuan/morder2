@@ -3,6 +3,7 @@ package com.zx.omp.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by simba on 2016/12/21 0021.
@@ -12,6 +13,15 @@ public class IndexController {
     @RequestMapping("/")
     public String indexpage() {
         return "/login";
+    }
+
+    @RequestMapping("/user/userindex")
+    public String userindex() {
+        return "/user/userindex";
+    }
+    @RequestMapping("/userlogin")
+    public String userlogin() {
+        return "/user/userlogin";
     }
 
     @RequestMapping("/login")

@@ -12,13 +12,13 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #true则url、username、password必须进行加密，设置为false则不使用加密
-    isencrypt: true
-    url: amRiYzpteXNxbDovLzEyNy4wLjAuMTozMzA2L25ldD91c2VVbmljb2RlPXRydWUmY2hhcmFjdGVyRW5jb2Rpbmc9dXRmLTgmYWxsb3dNdWx0aVF1ZXJpZXM9dHJ1ZQ==
-    username: cm9vdA==
-    password: cm9vdA==
-#    url: jdbc:mysql://127.0.0.1:3306/net?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
-#    username: root
-#    password: root
+    isencrypt: false
+#    url: amRiYzpteXNxbDovLzEyNy4wLjAuMTozMzA2L25ldD91c2VVbmljb2RlPXRydWUmY2hhcmFjdGVyRW5jb2Rpbmc9dXRmLTgmYWxsb3dNdWx0aVF1ZXJpZXM9dHJ1ZQ==
+#    username: cm9vdA==
+#    password: cm9vdA==
+    url: jdbc:mysql://127.0.0.1:3306/morder?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: root
     driver-class-name: com.mysql.jdbc.Driver
       # 下面为连接池的补充设置，应用到上面所有数据源中
       # 初始化大小，最小，最大
