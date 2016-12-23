@@ -25,7 +25,8 @@ public class AuthorityDetailsService implements UserDetailsService {
         // TODO Auto-generated method stub
         logger.info("OAuth2RestfulDetailsService loadUserByUsername"+this.toString());
         List<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
-        authorities.add(new SimpleGrantedAuthority("USER"));
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+//        authorities.add(new SimpleGrantedAuthority("ROLE_CLIENT"));
 
         return new User("user", "password", true, true, true, true, authorities);
 
