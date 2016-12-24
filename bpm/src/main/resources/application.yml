@@ -1,0 +1,63 @@
+server:
+  port: 9091
+  tomcat:
+    max-threads: 1000
+    min-spare-threads: 20
+  session:
+    cookie:
+      http-only: true
+spring:
+  application:
+    name: bpmrest
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #true则url、username、password必须进行加密，设置为false则不使用加密
+    isencrypt: false
+#    url: amRiYzpteXNxbDovLzEyNy4wLjAuMTozMzA2L25ldD91c2VVbmljb2RlPXRydWUmY2hhcmFjdGVyRW5jb2Rpbmc9dXRmLTgmYWxsb3dNdWx0aVF1ZXJpZXM9dHJ1ZQ==
+#    username: cm9vdA==
+#    password: cm9vdA==
+    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+      # 下面为连接池的补充设置，应用到上面所有数据源中
+      # 初始化大小，最小，最大
+    initial-size: 5
+    min-idle: 5
+    max-total: 200
+    # 配置获取连接等待超时的时间
+    max-wait-millis: 60000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    time-between-eviction-runs-millis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    min-evictable-idle-time-millis: 300000
+    validation-query: select 1
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    # 打开PSCache，并且指定每个连接上PSCache的大小
+    pool-prepared-statements: true
+    max-open-prepared-statements: 200
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+#  boot:
+#    admin:
+#      url: http://localhost:7003
+
+
+#    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    #合并多个DruidDataSource的监控数据
+    #spring.datasource.useGlobalDataSourceStat=true
+logging:
+  level: info,error
+  file: ./bpmrest.log
+#    org.springframework.web: debug
+#    com.mb.dtp.mapper.crowd: debug
+#kafka:
+#  broker:
+#    address: localhost:9092
+#websocket币种推送，为币的ID
