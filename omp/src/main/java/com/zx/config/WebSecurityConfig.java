@@ -4,10 +4,12 @@ package com.zx.config;
  * Created by simba on 2016/12/22 0022.
  */
 
+import com.zx.omp.service.TuserService;
 import com.zx.security.AuthorityDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -26,6 +28,8 @@ import javax.sql.DataSource;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     private DataSource dataSource;
+    @Resource
+    private TuserService tuserService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -61,7 +65,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(new AuthorityDetailsService());
+        auth.userDetailsService(new AuthorityDetailsService(tuserService)).passwordEncoder(new Md5PasswordEncoder());
     }
 
     @Bean

@@ -105,4 +105,25 @@ public interface TuserMapper {
         "where iduser = #{iduser,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Tuser record);
+
+    @Select({
+            "select",
+            "iduser, compid, uname, uemail, upwd, create_time, umphone, urealname, uisdel, ",
+            "utype",
+            "from tuser",
+            "where uname = #{uname,jdbcType=VARCHAR}"
+    })
+    @Results({
+            @Result(column="iduser", property="iduser", jdbcType=JdbcType.INTEGER, id=true),
+            @Result(column="compid", property="compid", jdbcType=JdbcType.INTEGER),
+            @Result(column="uname", property="uname", jdbcType=JdbcType.VARCHAR),
+            @Result(column="uemail", property="uemail", jdbcType=JdbcType.VARCHAR),
+            @Result(column="upwd", property="upwd", jdbcType=JdbcType.VARCHAR),
+            @Result(column="create_time", property="createTime", jdbcType=JdbcType.TIMESTAMP),
+            @Result(column="umphone", property="umphone", jdbcType=JdbcType.VARCHAR),
+            @Result(column="urealname", property="urealname", jdbcType=JdbcType.VARCHAR),
+            @Result(column="uisdel", property="uisdel", jdbcType=JdbcType.INTEGER),
+            @Result(column="utype", property="utype", jdbcType=JdbcType.INTEGER)
+    })
+    Tuser selectByUname(@Param("uname") String uname);
 }

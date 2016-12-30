@@ -34,7 +34,7 @@ public class OAuth2AuthServerConfig extends AuthorizationServerConfigurerAdapter
     @Resource
     private DataSource dataSource;
 //    @Resource
-//    private PasswordEncoder passwordEncoder;
+//    private PasswordEncoder passwordEncoder ;
 
     @Override
     public void configure(
