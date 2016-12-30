@@ -23,7 +23,7 @@ public class AuthorityDetailsService implements UserDetailsService {
 
     public UserDetails loadUserByUsername(String username) throws AuthenticationException {
         // TODO Auto-generated method stub
-        logger.info("OAuth2RestfulDetailsService loadUserByUsername"+this.toString());
+        logger.info("OAuth2RestfulDetailsService loadUserByUsername:"+username);
         List<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 //        authorities.add(new SimpleGrantedAuthority("ROLE_CLIENT"));
