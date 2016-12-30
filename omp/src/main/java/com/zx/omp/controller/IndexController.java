@@ -12,80 +12,80 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class IndexController {
     @RequestMapping("/")
     public String indexpage() {
-        return "/login";
+        return "login";
     }
 
     @RequestMapping("/user/userindex")
     public String userindex() {
-        return "/user/userindex";
+        return "user/userindex";
     }
     @RequestMapping("/userlogin")
     public String userlogin() {
-        return "/user/userlogin";
+        return "user/userlogin";
     }
 
     @RequestMapping("/login")
     public String login() {
-        return "/login";
+        return "login";
     }
 
     @RequestMapping("/index")
     public String index() {
-        return "/index";
+        return "index";
     }
 
     @RequestMapping("/flot")
     public String flot() {
-        return "/flot";
+        return "flot";
     }
 
     @RequestMapping("/morris")
     public String morris() {
-        return "/morris";
+        return "morris";
     }
 
     @RequestMapping("/tables")
     public String tables() {
-        return "/tables";
+        return "tables";
     }
 
     @RequestMapping("/forms")
     public String forms() {
-        return "/forms";
+        return "forms";
     }
 
     @RequestMapping("/panels-wells")
     public String panelsWells() {
-        return "/panels-wells";
+        return "panels-wells";
     }
 
     @RequestMapping("/buttons")
     public String buttons() {
-        return "/buttons";
+        return "buttons";
     }
 
     @RequestMapping("/notifications")
     public String notifications() {
-        return "/notifications";
+        return "notifications";
     }
 
     @RequestMapping("/typography")
     public String typography() {
-        return "/typography";
+        return "typography";
     }
 
     @RequestMapping("/icons")
     public String icons() {
-        return "/icons";
+        return "icons";
     }
 
     @RequestMapping("/grid")
     public String grid() {
-        return "/grid";
+        return "grid";
     }
 
     @RequestMapping("/blank")
     public String blank() {
-        return "/blank";
+        return "blank";
     }
 }
