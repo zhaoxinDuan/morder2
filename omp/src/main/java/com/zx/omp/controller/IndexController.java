@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.security.Principal;
+
 /**
  * Created by simba on 2016/12/21 0021.
  */
@@ -30,7 +32,8 @@ public class IndexController {
     }
 
     @RequestMapping("/index")
-    public String index() {
+    public String index(Principal user) {
+
         return "index";
     }
 
