@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/test" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1491125058377" name="" targetNamespace="http://www.activiti.org/test" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="ywProcess" isClosed="false" isExecutable="true" processType="None">
+    <startEvent id="start_yw" name="�?�?"/>
+    <userTask activiti:exclusive="true" id="yw_order" name="下单"/>
+    <userTask activiti:exclusive="true" id="yw_make" name="制作"/>
+    <userTask activiti:exclusive="true" id="yw_send" name="送单"/>
+    <endEvent id="yw_end" name="结束"/>
+    <sequenceFlow id="_7" sourceRef="start_yw" targetRef="yw_order"/>
+    <sequenceFlow id="_8" sourceRef="yw_order" targetRef="yw_make"/>
+    <sequenceFlow id="_2" sourceRef="yw_make" targetRef="yw_send"/>
+    <sequenceFlow id="_3" sourceRef="yw_send" targetRef="yw_end"/>
+  </process>
+  <bpmndi:BPMNDiagram documentation="background=#3C3F41;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
+    <bpmndi:BPMNPlane bpmnElement="ywProcess">
+      <bpmndi:BPMNShape bpmnElement="start_yw" id="Shape-start_yw">
+        <omgdc:Bounds height="32.0" width="32.0" x="260.0" y="35.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="yw_order" id="Shape-yw_order">
+        <omgdc:Bounds height="55.0" width="85.0" x="235.0" y="145.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="yw_make" id="Shape-yw_make">
+        <omgdc:Bounds height="55.0" width="85.0" x="235.0" y="275.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="yw_send" id="Shape-yw_send">
+        <omgdc:Bounds height="55.0" width="85.0" x="265.0" y="415.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="yw_end" id="Shape-yw_end">
+        <omgdc:Bounds height="32.0" width="32.0" x="280.0" y="570.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_2" id="BPMNEdge__2" sourceElement="yw_make" targetElement="yw_send">
+        <omgdi:waypoint x="292.5" y="330.0"/>
+        <omgdi:waypoint x="292.5" y="415.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3" id="BPMNEdge__3" sourceElement="yw_send" targetElement="yw_end">
+        <omgdi:waypoint x="296.0" y="470.0"/>
+        <omgdi:waypoint x="296.0" y="570.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7" id="BPMNEdge__7" sourceElement="start_yw" targetElement="yw_order">
+        <omgdi:waypoint x="276.0" y="67.0"/>
+        <omgdi:waypoint x="276.0" y="145.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8" id="BPMNEdge__8" sourceElement="yw_order" targetElement="yw_make">
+        <omgdi:waypoint x="277.5" y="200.0"/>
+        <omgdi:waypoint x="277.5" y="275.0"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

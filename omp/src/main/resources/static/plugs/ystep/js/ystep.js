@@ -520,7 +520,7 @@
                         "</div>"+
                       "</div>";
       //步骤框架
-      var stepHtml = "<li class='ystep-step ystep-step-undone' data-container='body' data-toggle='popover' data-placement='top' data-title='' data-content='' data-trigger='hover'>"+
+      var stepHtml = "<li class='ystep-step ystep-step-undone' data-container='body' data-toggle='popover' data-placement='top' data-title='' data-content='' data-trigger='click'>"+
                      "</li>";
       //决策器
       var logic = {
@@ -582,7 +582,7 @@
           //构造步骤html
           $stepHtml.attr("data-title",_s.title);
           $stepHtml.attr("data-content",_s.content);
-          $stepHtml.text(_s.title);
+          $stepHtml.text(_s.title+"_"+_s.id);
           //将步骤插入到步骤列表中
           $ystepContainerSteps.append($stepHtml);
           //重置步骤

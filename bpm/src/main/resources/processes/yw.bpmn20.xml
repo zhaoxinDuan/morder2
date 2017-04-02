@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:activiti="http://activiti.org/bpmn"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.activiti.org/test">
+    <process id="ywProcess" isExecutable="true" name="yw process">
+        <startEvent id="yw_start" name="开始">
+            <extensionElements>
+                <activiti:formProperty id="personId" name="person id" type="long"
+                                       required="true"></activiti:formProperty>
+                <activiti:formProperty id="compId" name="company Id" type="long"
+                                       required="true"></activiti:formProperty>
+            </extensionElements>
+        </startEvent>
+        <userTask activiti:exclusive="true" id="yw_order" name="下单"
+                  activiti:candidateUsers="${joinService.findUsers(execution)}" isForCompensation="true"/>
+        <userTask activiti:exclusive="true" id="yw_make" name="制作"
+                  activiti:candidateUsers="${joinService.findUsers(execution)}" isForCompensation="true"/>
+        <userTask activiti:exclusive="true" id="yw_send" name="送货"
+                  activiti:candidateUsers="${joinService.findUsers(execution)}" isForCompensation="true"/>
+        <endEvent id="yw_end" name="结束"/>
+        <sequenceFlow id="_7" sourceRef="yw_start" targetRef="yw_order"/>
+        <sequenceFlow id="_8" sourceRef="yw_order" targetRef="yw_make"/>
+        <sequenceFlow id="_2" sourceRef="yw_make" targetRef="yw_send"/>
+        <sequenceFlow id="_3" sourceRef="yw_send" targetRef="yw_end"/>
+    </process>
+
+</definitions>

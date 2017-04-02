@@ -68,7 +68,7 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="../../static/js/sb-admin-2.js" th:src="@{/js/sb-admin-2.js}"></script>
-        <script src="../../static/plugs/ystep/js/ystep.js" th:src="@{/plugs/ystep/js/ystep.js}"></script>
+        <script src="../../static/plugs/ystep/js/ystep.js" th:src="@{/plugs/ystep/js/ystep.js?t=1}"></script>
         <script th:inline="javascript">
             /*<![CDATA[*/
             //根据jQuery选择器找到需要加载ystep的容器
@@ -85,19 +85,24 @@
                     //步骤名称
                     title: "发起",
                     //步骤内容(鼠标移动到本步骤节点时，会提示该内容)
-                    content: "实名用户/公益组织发起项目"
+                    content: "实名用户/公益组织发起项目",
+                    id:1
                 }, {
                     title: "审核",
-                    content: "乐捐平台工作人员审核项目"
+                    content: "乐捐平台工作人员审核项目",
+                    id:2
                 }, {
                     title: "募款",
-                    content: "乐捐项目上线接受公众募款"
+                    content: "乐捐项目上线接受公众募款",
+                    id:3
                 }, {
                     title: "执行",
-                    content: "项目执行者线下开展救护行动"
+                    content: "项目执行者线下开展救护行动",
+                    id:4
                 }, {
                     title: "结项",
-                    content: "项目执行者公示善款使用报告"
+                    content: "项目执行者公示善款使用报告",
+                    id:5
                 }]
             });
             $("#ystep1").setStep(3);

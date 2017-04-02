@@ -29,7 +29,7 @@ public class ActivitiService {
 		Map<String, Object> variables = new HashMap<String, Object>();
 		variables.put("personId", personId);
 		variables.put("compId", compId);
-		runtimeService.startProcessInstanceByKey("joinProcess", variables);
+		runtimeService.startProcessInstanceByKey("ywProcess", variables);
 	}
 	
 	//获得某个人的任务别表
